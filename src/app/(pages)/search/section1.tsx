@@ -3,11 +3,11 @@ import SongItem2 from "@/app/components/Song/song-item2";
 import Title from "@/app/components/Title/title";
 import { dbFirebase } from "@/app/firebaseConfig";
 import { onValue, ref } from "firebase/database";
-import { useRouter, Params } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Section1 () {
-    const params = Params()
+    const params = useSearchParams()
     const keywordDefault = params.get("keyword") || ""
     const [dataFinal, setDataFinal] = useState<any>()
     useEffect(() => {
