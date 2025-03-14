@@ -6,6 +6,7 @@ export default function Search() {
     const router = useRouter()
     const params = useSearchParams()
     const keywordDefault = params.get("keyword") || ""
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleSearch = (event:any) => {
       event.preventDefault()
       const keyword = event.target.keyword.value

@@ -2,11 +2,14 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { FaVolumeUp } from "react-icons/fa";
 export default function PlayVolume() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleChange = (event:any) => {
       const elementPlayAudio = document.querySelector('.play-audio')
       if(elementPlayAudio) {
         const volume = parseFloat(event.target.value)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const elementAudio: any = elementPlayAudio.querySelector('.inner-audio')
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const elementVolumeCurrent: any = elementPlayAudio.querySelector('.inner-volume .inner-current')
         elementAudio.volume = volume/100
         elementVolumeCurrent.style.width = `${volume}%`

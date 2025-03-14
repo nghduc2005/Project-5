@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
     const router = useRouter()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleLogin = (event: any) => {
       event.preventDefault()
       const email = event.target.email.value
@@ -18,7 +19,7 @@ export default function LoginPage() {
             router.push("/")
           }
         })
-        .catch((error) => {
+        .catch(() => {
           alert("Tài khoản hoặc mật khẩu không chính xác")
         })
     }

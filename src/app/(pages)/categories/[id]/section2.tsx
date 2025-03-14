@@ -5,10 +5,10 @@ import Title from "@/app/components/Title/title";
 import { dbFirebase } from "@/app/firebaseConfig";
 import { onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";
-import CategoriesPage from "../page";
 
 export default function Section2 (props: {id: string}) {
     const {id}  = props
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [dataFinal, setDataFinal] = useState<any>()
     useEffect(() => {
         const songsRef = ref(dbFirebase, "songs")
@@ -45,6 +45,7 @@ export default function Section2 (props: {id: string}) {
                         {dataFinal && (
                             <>
                                 {
+                                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                     dataFinal.map((item: any) => (
                                         <SongItem2 key={item.id} {...item}/>
                                     ))

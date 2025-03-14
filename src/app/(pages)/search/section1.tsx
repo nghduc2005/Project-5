@@ -4,12 +4,13 @@ import SongItem2 from "@/app/components/Song/song-item2";
 import Title from "@/app/components/Title/title";
 import { dbFirebase } from "@/app/firebaseConfig";
 import { onValue, ref } from "firebase/database";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Section1 () {
     const params = useSearchParams()
     const keywordDefault = params.get("keyword") || ""
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [dataFinal, setDataFinal] = useState<any>()
     useEffect(() => {
         const songsRef = ref(dbFirebase, "songs")
@@ -44,7 +45,9 @@ export default function Section1 () {
                         {
                             dataFinal && (
                                 <>
-                                    {dataFinal.map((item:any) => (
+                                    {
+                                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                                    dataFinal.map((item:any) => (
                                         <SongItem2 key={item.id} {...item}/>
                                     ))}
                                 </>

@@ -1,8 +1,8 @@
 "use client"
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function SiderMenuItem(props: any) {
     const pathName = usePathname() //phải dùng use client để sử dụng
     const { item, isLogin } = props

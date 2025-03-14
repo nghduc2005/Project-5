@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import ButtonPlay from "../Button/button-play";
 import ButtonHeart2 from "../Button/button-heart2";
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function SongItem2 (props:any) {
     const {image, title, singer, time}  = props
     return(

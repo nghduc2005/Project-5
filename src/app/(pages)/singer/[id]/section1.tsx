@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function Section1 (props: {id:string}) {
     const {id} = props
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [dataFinal, setDataFinal] = useState<any>()
     useEffect(() => {
         const singerRef = ref(dbFirebase, "singers/"+ id)

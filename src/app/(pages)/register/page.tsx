@@ -2,12 +2,12 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Title from "@/app/components/Title/title";
 import { authFirebase, dbFirebase } from "@/app/firebaseConfig";
-import { error } from "console";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ref, set } from "firebase/database";
 import { useRouter } from "next/navigation";
 export default function RegisterPage() {
     const router = useRouter()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleRegister = (event: any) => {
       event.preventDefault()
       const fullName = event.target.fullName.value

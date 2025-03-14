@@ -1,5 +1,4 @@
 "use client"
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import CardItem from "@/app/components/Card/card-item";
 import Title from "@/app/components/Title/title";
 import { dbFirebase } from "@/app/firebaseConfig";
@@ -7,6 +6,7 @@ import { onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 
 export default function Section2() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [dataFinal, setDataFinal] = useState<any>()
     useEffect(() => {
         const categoriesRef = ref(dbFirebase, "categories")
@@ -33,7 +33,9 @@ export default function Section2() {
                 <div className="grid grid-cols-5 gap-[20px]">
                     {dataFinal && ( //cần kiểm tra vì ban đầu chưa kịp call xong api sẽ là undefined
                         <>
-                            {dataFinal.map((item:any, index:number) => (
+                            {
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            dataFinal.map((item:any, index:number) => (
                                 <CardItem key={index} {...item}
                                 />
                             ))}

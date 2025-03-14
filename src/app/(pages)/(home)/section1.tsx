@@ -6,6 +6,7 @@ import { dbFirebase } from "@/app/firebaseConfig";
 import { onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 export default function Section1() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [dataFinal, setDataFinal] = useState<any>()
     useEffect(() => {
         const songsRef = ref(dbFirebase, "songs")
@@ -49,7 +50,10 @@ export default function Section1() {
                 <div className="grid grid-cols-1 gap-[12px]" song-list="">
                     {dataFinal && (
                         <>
-                            {dataFinal.map((item:any, index: any)=>(            
+                            {
+                                
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            dataFinal.map((item:any)=>(            
                                 <SongItem 
                                 id = {item.id}
                                 key={item.id}

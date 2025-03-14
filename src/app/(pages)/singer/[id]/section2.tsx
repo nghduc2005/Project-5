@@ -7,33 +7,8 @@ import { onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 
 export default function Section2 (props:{id:string}) {
-    const data = [
-        {
-            image: "/demo/image6.png",
-            title: "Cô Phòng",
-            singer: "Hồ Quang Hiếu, Huỳnh Vân",
-            time: "4:32"
-        },
-        {
-            image: "/demo/image6.png",
-            title: "Cô Phòng",
-            singer: "Hồ Quang Hiếu, Huỳnh Vân",
-            time: "4:32"
-        },
-        {
-            image: "/demo/image6.png",
-            title: "Cô Phòng",
-            singer: "Hồ Quang Hiếu, Huỳnh Vân",
-            time: "4:32"
-        },
-        {
-            image: "/demo/image6.png",
-            title: "Cô Phòng",
-            singer: "Hồ Quang Hiếu, Huỳnh Vân",
-            time: "4:32"
-        }
-    ]
     const {id}  = props
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [dataFinal, setDataFinal] = useState<any>()
     useEffect(() => {
         const songsRef = ref(dbFirebase, "songs")
@@ -67,7 +42,9 @@ export default function Section2 (props:{id:string}) {
                         {/* Item */}
                         {dataFinal && (
                             <>
-                                {dataFinal.map((item:any) => (
+                                {
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                                dataFinal.map((item:any) => (
                                     <SongItem2 key={item.id} {...item}/>
                                 ))}
                             </>

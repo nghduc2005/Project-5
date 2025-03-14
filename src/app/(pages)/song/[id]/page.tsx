@@ -2,7 +2,7 @@
 import Section3 from "./section3";
 import Section1 from "./section1";
 import Section2 from "./section2";
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function SongDetailPage({params}: any) {
     const {id} = await params
 

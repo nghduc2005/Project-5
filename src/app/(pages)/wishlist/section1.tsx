@@ -7,6 +7,7 @@ import { onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 
 export default function Section1 () {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [dataFinal, setDataFinal] = useState<any>()
     useEffect(() => {
         onAuthStateChanged(authFirebase, (user) => {
@@ -45,6 +46,7 @@ export default function Section1 () {
                         {dataFinal && (
                             <>
                                 {
+                                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                     dataFinal.map((item: any) => (
                                         <SongItem2 key={item.id} {...item}/>
                                     ))
@@ -55,8 +57,4 @@ export default function Section1 () {
             </div>
         </>
     )
-}
-
-function setIsLogin(arg0: boolean) {
-    throw new Error("Function not implemented.");
 }

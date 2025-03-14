@@ -7,7 +7,7 @@ import { onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 
 export default function Section3() {
-    
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [dataFinal, setDataFinal] = useState<any>()
     useEffect(() => {
         const singersRef = ref(dbFirebase, "singers")
@@ -34,7 +34,9 @@ export default function Section3() {
                 <div className="grid grid-cols-5 gap-[20px]">
                     {dataFinal && (
                         <>
-                            {dataFinal.map((item:any, index:number) => (
+                            {
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            dataFinal.map((item:any, index:number) => (
                                 <CardItem key={index} {...item}
                                 />
                             ))}       

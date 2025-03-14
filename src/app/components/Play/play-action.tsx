@@ -6,7 +6,9 @@ export default function PlayAction() {
     const handlePlay = () => {
         const elementPlayAudio = document.querySelector('.play-audio')
         if(elementPlayAudio) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const elementButtonPlay : any = elementPlayAudio.querySelector('.inner-button-play')
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const elementAudio: any = elementPlayAudio.querySelector('.inner-audio')
             if(elementButtonPlay.classList.contains('play')) {
                 elementButtonPlay.classList.remove('play')
@@ -18,9 +20,11 @@ export default function PlayAction() {
         }
     }
     const handleNext = () => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const elementPlayAudio: any= document.querySelector('.play-audio')
         const idSongCurrent = elementPlayAudio.getAttribute('song-id')
         if(idSongCurrent) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const songList:any = document.querySelector('[song-list]')
             if(songList) {
                 const elementSongCurrent= songList.querySelector(`[data-song="${idSongCurrent}"]`)
@@ -34,9 +38,11 @@ export default function PlayAction() {
     }
 
     const handlePrevious = () => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const elementPlayAudio: any= document.querySelector('.play-audio')
         const idSongCurrent = elementPlayAudio.getAttribute('song-id')
         if(idSongCurrent) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const songList:any = document.querySelector('[song-list]')
             if(songList) {
                 const elementSongCurrent= songList.querySelector(`[data-song="${idSongCurrent}"]`)

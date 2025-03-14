@@ -1,9 +1,11 @@
 "use client"
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function PlayTime() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleChange = (event:any) => {
         const input = event.target
         const time = parseFloat(input.value)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const elementAudio:any = document.querySelector(".play-audio .inner-audio")
         elementAudio.currentTime = time
         
