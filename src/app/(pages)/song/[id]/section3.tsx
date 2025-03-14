@@ -1,7 +1,7 @@
 "use client"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import SongItem2 from "@/app/components/Song/song-item2";
 import Title from "@/app/components/Title/title";
-import CardInfo from "@/app/components/Card/cart-info";
 import { dbFirebase } from "@/app/firebaseConfig";
 import { onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";

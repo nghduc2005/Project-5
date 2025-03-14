@@ -1,4 +1,4 @@
-import { FaPlay, FaRegHeart } from "react-icons/fa";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import ButtonPlay from "../Button/button-play";
 import ButtonHeart2 from "../Button/button-heart2";
 

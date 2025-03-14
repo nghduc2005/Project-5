@@ -1,5 +1,5 @@
 "use client"
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import SongItem from "@/app/components/Song/song-item";
 import Title from "@/app/components/Title/title";
 import { dbFirebase } from "@/app/firebaseConfig";

@@ -1,4 +1,5 @@
 "use client"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { FaPause, FaPlay, FaStepBackward, FaStepForward } from "react-icons/fa";
 
 export default function PlayAction() {

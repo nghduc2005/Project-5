@@ -1,4 +1,5 @@
 "use client"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { authFirebase, dbFirebase } from "@/app/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 import { ref, runTransaction } from "firebase/database";

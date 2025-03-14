@@ -1,4 +1,5 @@
 "use client"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Title from "@/app/components/Title/title";
 import { authFirebase } from "@/app/firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";

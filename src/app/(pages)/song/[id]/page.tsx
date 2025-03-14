@@ -1,5 +1,4 @@
-import CardInfo from "@/app/components/Card/cart-info";
-import Title from "@/app/components/Title/title";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Section3 from "./section3";
 import Section1 from "./section1";
 import Section2 from "./section2";

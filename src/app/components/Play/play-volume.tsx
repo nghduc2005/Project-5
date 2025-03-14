@@ -1,4 +1,5 @@
 "use client"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { FaVolumeUp } from "react-icons/fa";
 export default function PlayVolume() {
     const handleChange = (event:any) => {

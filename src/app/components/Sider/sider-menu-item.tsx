@@ -1,4 +1,5 @@
 "use client"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 

@@ -1,4 +1,5 @@
 "use client"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { TiHome } from "react-icons/ti";
 import { FaMusic } from "react-icons/fa";
 import { IoPerson } from "react-icons/io5";

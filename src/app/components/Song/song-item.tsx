@@ -1,5 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Link from "next/link";
-import { FaHeart } from "react-icons/fa";
 import ButtonPlay from "../Button/button-play";
 import ButtonHeart from "../Button/button-heart";
 
